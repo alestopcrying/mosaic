@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>a slice of dolce</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- IMPORTANTE: percorsi RELATIVI (senza slash iniziale) -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Header fisso in overlay -->
     <header class="site-header">
       <div class="header-inner">
         <h1 class="site-title">a slice of dolce</h1>
@@ -20,9 +22,13 @@
     </header>
 
     <main id="home">
+      <!-- >>> QUESTO È IL CONTENITORE DEL MOSAICO (fondamentale) <<< -->
       <div id="masonry" class="masonry"></div>
+
+      <!-- Sentinella opzionale (se usi la versione “infinite scroll”) -->
       <div id="sentinel" aria-hidden="true"></div>
 
+      <!-- Sezioni per i link del menu -->
       <section id="about" class="section">
         <h2>About</h2>
         <p>Scrivi qui qualcosa su di te o sul progetto.</p>
@@ -34,6 +40,12 @@
       </section>
     </main>
 
+    <noscript>Questo sito funziona meglio con JavaScript attivo.</noscript>
+
+    <!-- IMPORTANTE: percorso RELATIVO (senza slash iniziale) -->
+    <script src="script.js"></script>
+  </body>
+</html>
     <noscript>Questo sito funziona meglio con JavaScript attivo.</noscript>
     <script src="script.js"></script>
   </body>
