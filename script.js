@@ -2,9 +2,10 @@
 // Caricale nella cartella "images" (vedi passo 4) e usa percorsi tipo "images/foto1.jpg".
 const IMAGES = [
   // esempi temporanei (sostituiscili con le tue immagini in /images)
-  "images/foto1.jpg",
-  "images/foto2.jpg",
-  "images/foto3.jpg",
+  "images/fotosito1.png",
+  "images/fotosito2.png",
+  "images/fotosito3.png",
+  "images/fotosito4.png",
 ];
 
 const BATCH_SIZE = 12;
