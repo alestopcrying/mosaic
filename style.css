@@ -1,0 +1,101 @@
+:root {
+  --bg: #0f0f10;
+  --text: #ffffff;
+  --muted: #b8b8b8;
+  --gap: 16px;
+  --header-h: clamp(120px, 22vh, 220px);
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+/* Header fisso e centrato */
+.site-header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: var(--header-h);
+  display: grid;
+  place-items: center;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.header-inner {
+  pointer-events: auto;
+  padding: 14px 18px;
+  border-radius: 16px;
+  background: rgba(0,0,0,.35);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  text-align: center;
+  max-width: min(92vw, 960px);
+  width: fit-content;
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+
+.site-title {
+  margin: 0 0 6px 0;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  font-size: clamp(22px, 4.5vw, 42px);
+}
+
+.site-nav {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.site-nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  opacity: .9;
+}
+.site-nav a:hover { opacity: 1; }
+
+main { padding-top: calc(var(--header-h) + 24px); }
+
+/* Mosaico tipo Tumblr */
+.masonry {
+  column-gap: var(--gap);
+  padding: 0 clamp(10px, 4vw, 40px);
+  column-count: 1;
+}
+@media (min-width: 480px)  { .masonry { column-count: 2; } }
+@media (min-width: 800px)  { .masonry { column-count: 3; } }
+@media (min-width: 1200px) { .masonry { column-count: 4; } }
+
+.card {
+  break-inside: avoid;
+  margin: 0 0 var(--gap) 0;
+  display: block;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #1a1a1a;
+  transition: transform .2s ease;
+}
+.card:hover { transform: translateY(-2px); }
+
+.card img { display: block; width: 100%; height: auto; }
+
+.section {
+  padding: 64px clamp(10px, 4vw, 40px);
+  color: var(--muted);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.section h2 {
+  color: var(--text);
+  margin-top: 0;
+  font-size: clamp(22px, 3.2vw, 32px);
+}
