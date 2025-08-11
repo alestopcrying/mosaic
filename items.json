@@ -1,0 +1,23 @@
+[
+  {
+    "id": "fotosito1",
+    "image": "images/fotosito1.png",
+    "title": "Titolo 1",
+    "desc": "Breve descrizione dell’item 1.",
+    "mailto": "mailto:tuamail@example.com?subject=Item%20fotosito1"
+  },
+  {
+    "id": "fotosito2",
+    "image": "images/fotosito2.png",
+    "title": "Titolo 2",
+    "desc": "Breve descrizione dell’item 2.",
+    "mailto": "mailto:tuamail@example.com?subject=Item%20fotosito2"
+  },
+  {
+    "id": "fotosito3",
+    "image": "images/fotosito3.png",
+    "title": "Titolo 3",
+    "desc": "Breve descrizione dell’item 3.",
+    "mailto": "mailto:tuamail@example.com?subject=Item%20fotosito3"
+  }
+]
