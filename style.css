@@ -1,0 +1,42 @@
+:root{
+  --bg:#fff; --text:#000; --muted:#444;
+  --gap:16px; --header-h:clamp(120px,22vh,220px);
+  --accent:#e11d48;
+  --col-width:320px; /* larghezza fissa colonna (tutte le immagini si adattano) */
+}
+
+*{box-sizing:border-box} html,body{height:100%} html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:var(--bg)}
+
+.site-header{position:fixed;inset:0 0 auto 0;height:var(--header-h);display:grid;place-items:center;z-index:10;pointer-events:none}
+.header-inner{pointer-events:auto;text-align:center;background:transparent}
+.site-title{margin:0 0 6px;font-weight:800;font-size:clamp(22px,4.5vw,42px);color:var(--accent)}
+.site-title a{text-decoration:none;color:var(--accent)}
+.site-nav{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.site-nav a{color:var(--accent);text-decoration:none;font-weight:600}
+
+main{padding-top:calc(var(--header-h) + 24px)}
+
+/* Mosaico a colonne con larghezza fissa (immagini uguali in larghezza, altezze variabili) */
+.masonry{
+  column-gap:var(--gap);
+  padding:0 clamp(10px,4vw,40px);
+  column-width:var(--col-width); /* forza la larghezza delle colonne */
+}
+.card{break-inside:avoid;margin:0 0 var(--gap);display:block;background:transparent;border-radius:0;box-shadow:none}
+.card img{display:block;width:100%;height:auto;border:0;border-radius:0;box-shadow:none}
+
+/* Sezioni */
+.section{padding:64px clamp(10px,4vw,40px);color:var(--muted);max-width:1000px;margin:0 auto}
+.section h2{color:var(--text);margin-top:0;font-size:clamp(22px,3.2vw,32px)}
+
+/* Pagina prodotto */
+.product-main{padding-top:calc(var(--header-h) + 24px);padding-inline:clamp(10px,4vw,40px)}
+.product-wrap{display:grid;grid-template-columns:1fr;gap:24px;max-width:1100px;margin:0 auto}
+.product-media img{width:100%;height:auto;display:block}
+.product-info h2{margin:0 0 10px;font-size:clamp(22px,3.2vw,32px)}
+.product-info p{margin:0 0 14px;color:var(--muted)}
+.mail-link{color:var(--accent);font-weight:700;text-decoration:none}
+@media(min-width:900px){
+  .product-wrap{grid-template-columns:1.1fr .9fr;align-items:start}
+}
