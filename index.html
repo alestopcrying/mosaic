@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>a slice of dolce</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <!-- percorsi RELATIVI (senza slash iniziale) -->
-    <link rel="stylesheet" href="style.css" />
+    <!-- percorsi RELATIVI + cache buster -->
+    <link rel="stylesheet" href="style.css?v=6" />
   </head>
   <body>
-    <!-- Header fisso in overlay -->
     <header class="site-header">
       <div class="header-inner">
         <h1 class="site-title">a slice of dolce</h1>
@@ -22,9 +21,8 @@
     </header>
 
     <main id="home">
-      <!-- Contenitore del mosaico -->
+      <!-- CONTENITORE MOSAICO -->
       <div id="masonry" class="masonry"></div>
-      <div id="sentinel" aria-hidden="true"></div>
 
       <section id="about" class="section">
         <h2>About</h2>
@@ -38,7 +36,7 @@
     </main>
 
     <noscript>Questo sito funziona meglio con JavaScript attivo.</noscript>
-    <!-- Script in fondo al body, percorso RELATIVO -->
-    <script src="script.js"></script>
+    <!-- cache buster anche qui -->
+    <script src="script.js?v=6"></script>
   </body>
 </html>
